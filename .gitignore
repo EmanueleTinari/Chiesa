@@ -1,0 +1,62 @@
+### Dirs: ###
+
+# Excel temporary files:
+~$*.xls*
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+Bibbia.chm
+Bible HTML.html
+blank.html
+*.txt
+*.exe
+*.css
+Scrittura archiviazione locale.html
+SchemaLink.html
+Index.html
+Index.js
+Istruzione Redemptionis sacramentum.pdf
+javascript.js
+jquery-3.7.1.js
+jquery-3.7.1.min.js
+modal.js
+Encicliche.xlsx
+Tooltip1.html
+Varie Icone.7z
+Vulgata.chm
+cevii-dec-apa.html
+cevii-dec-adg.html
+Indicione.html
+/Table Orig con note renumerate
+/Vulgata
+cevii-dic-dih.html
+cevii-dic-gre.html
+cevii-dec-unr.html
+cevii-dec-pro.html
+cevii-dec-pec.html
+cevii-dec-ore.html
+cevii-dec-opt.html
+cevii-cos-ges.html
+cevii-cos-lug.html
+cevii-cos-sac.html
+cevii-dec-chd.html
+cevii-dec-inm.html
+cevii-dic-noa.html
+cevii-cos-dev.html
+bxiv-bre-noa.pdf

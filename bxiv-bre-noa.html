@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="./stile.css" />
+		<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABRFBMVEUAAAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AADAfbjwAAAAa3RSTlMAAQIDBAUHCAkKDQ8SFBgbHSAjJScpNDY3OTo7Q0VHSElLTlFVVldZXGBiZ25wcnN1d3h6fX+ChYaKj5CXmJyeoKGisbS1tre6wcfIyc3P0NHV1tfZ29zi4+Xm6Onq6+zv8PHy8/T6+/z9/isEjToAAAGJSURBVDjLbZPXXxNREEZPwCiiEY0lYsTeGypWUOwVFNTFroAmZrPn/3/3Ye/WME8793y/2Ttzv4Ei9tz/MkiS+MfifraIxt2hRTwZr/OL1uJOlX9UNbq8b3erfe6dqhvbSuV7anK1kR+cidXhRJ7/UZcblZKP1WEzJCvqrfqlTqp/08/z6txoWyfUeQDUZYBOJ4dvAB6qTWBObQBdnQ583VWAf/oMiNOeu6rdwHUVOK7CLnUMmDFT/FZdA0i0wzX9DiXFes55pS94n7eQKjYKzhHt09NDlBUFZ1JloAepKjLOjrqATYteMkG/+EV6P4t5TKqs6M2Q/8rNEBTT2mdWv5X42kxJ8Vxf5oNK5xOVJ0aih2Ggt4G3gWeK7XBUBWbDY0WBp4p2+livQ6ElgCgq5tEGHqR14Kx6o2qWiWCphTT9pF6vG+qY2suS3qhpF8umZayvJlcKfDpWhztLi/FZ1Q8X9rZaU6eWVN1sVkpeqq/evZHlXUhK+On4Vgs+Nf91kBj/fHSgdPgf4HOs6LtLnD4AAAAASUVORK5CYII=" />
+		<!-- <link rel="shortcut icon" href="data:image/png;base64,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" /> -->
+		<title>Non Ambigimus (30 maggio 1741) | Benedetto XIV</title>
+		<meta name="title" content="Breve Non Ambigimus" />
+		<meta name="author" content="Benedictus XIV" />
+		<meta name="subject" content="Breve Non Ambigimus" />
+		<meta name="date.issued" content="1741/05/30" />
+		<meta name="description" content="Benedetto XIV, Breve Non Ambigimus, 30 maggio 1741" />
+		<meta name="language" content="Italian" />
+		<meta name="date" content="1741-05-30T08:00:00.000+02:00" />
+		<meta name="copyright" content="Dicastero per la Comunicazione - Libreria Editrice Vaticana" />
+		<meta name="dc.language" content="ita-it" scheme="RFC1766" />
+		<meta itemprop="file-name" value="bxiv-bre-noa" />
+		<meta itemprop="file-extension" value="html" />
+		<meta itemprop="file-name-explain" value="Benedictus XIV - Breve - Non Ambigimus" />
+		<meta name="creator" content="Emanuele Tinari" />
+		<script src="./modal.js">
+// Inserire qui il contenuto del file Index.js ed
+// eliminare il link allo stesso nel src qui sopra.
+		</script>
+	</head>
+	<body class="docBdy" name="docBdy" id="docBdy">
+		<table class="docTbl" name="docTbl" id="docTbl">
+			<tbody>
+				<tr>
+					<td class="logo">
+						<div class="logo"></div>
+						<div>
+							<a href="">Benedetto XIV</a>
+							<p>&rarr;</p>
+							<a href="">Brevi</a>
+						</div>
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<td class="main">
+
+
+
+						<hr>
+
+
+
+						<p class="tipd">Breve</p>
+
+
+
+						<p class="titd">Non Ambigimus</p>
+
+
+
+						<p class="tipa">del Sommo Pontefice</p>
+
+
+
+						<p class="aut">Benedetto XIV</p>
+
+
+
+						<p class="cu">Ai Venerabili Fratelli Patriarchi, Primati,
+						<br/>
+						Metropoliti, Arcivescovi e Vescovi
+						<br/>
+						che hanno pace e comunione con la Sede Apostolica.</p>
+
+
+
+						<p class="incipit" id="bxiv-bre-noa_incipit" name="bxiv-bre-noa_incipit" aria-label="Incipit" title="Incipit">Il Papa Benedetto XIV.
+						<br />
+						Venerabili Fratelli, salute e Apostolica Benedizione.</p>
+
+
+
+						<p class="cap"><a name="bxiv-bre-noa_c1" id="bxiv-bre-noa_c1" aria-label="Capitolo 1" title="Capitolo 1">Capitolo I</p>
+						<p>Non nutriamo dubbi, Venerabili Fratelli, che quanti aderiscono alla Religione Cattolica sappiano come tutta la Chiesa, diffusa per l’orbe cristiano, ritenga di dover annoverare, fra i principali capisaldi della retta dottrina, il digiuno quaresimale.
+						<br />
+						Abbozzato un tempo per la prima volta nella Legge e nei Profeti, quasi consacrato dall’esempio di Nostro Signore Gesù Cristo, tramandato dagli Apostoli, prescritto ovunque dai Sacri canoni, è accolto ed osservato da tutta la Chiesa fin dai suoi primordi.</p>
+						<p>Certamente, come tramandarono gli antichi Padri, con l’istituzione di questo comune rimedio per noi che quotidianamente pecchiamo, possiamo noi pure, associati alla Croce di Cristo, compiere qualcosa in ciò che Egli stesso ci ha procurato.
+						<br />
+						Nello stesso tempo, purificati dal digiuno nel corpo e nell’anima, ci prepariamo a commemorare in modo più degno i sacri Misteri della nostra Redenzione per mezzo del ricordo della Passione e della Risurrezione, celebrati con maggiore solennità soprattutto nel tempo quaresimale.</p>
+						<p>Con il digiuno, quasi contrassegno della nostra milizia, veniamo distinti dai nemici della Chiesa, allontaniamo i fulmini della divina vendetta e, con l’aiuto divino, veniamo protetti nel volgere dei giorni dai Principi delle tenebre.</p>
+						<p>Dalla sua inosservanza scaturisce un non trascurabile danno della gloria di Dio, una non lieve onta alla Religione Cattolica e un sicuro pericolo per i fedeli; è certo infatti che le sventure dei popoli, le sciagure mortali, pubbliche e private, non trovano origine altrove.</p>
+						<p>Quanto lontano, quanto difforme, quanto contraddittorio è il comportamento attuale di chi digiuna dalla persuasione e dal rispetto per la santissima Quaresima e per gli altri giorni dedicati al digiuno, profondamente radicati negli animi di tutti i Cattolici; quanto si scosti dall’autentica dottrina del digiuno e dalla prassi osservata sempre, dovunque e da tutti.
+						<br />
+						Voi, Venerabili Fratelli, che conoscete bene gli usi e i costumi dei popoli affidati alla Vostra cura, per la particolare Vostra perspicacia, ravvisate tutto ciò con più evidenza di tutti.</p>
+						<p>Sicuramente, poiché a Noi, posti in questo eminente osservatorio del Governo apostolico, vengono riportate le notizie delle genti, non possiamo non lamentare che la sacratissima osservanza del digiuno quaresimale, per l’eccessiva facilità di dispensare ovunque, in modo indiscriminato, per futili e non urgenti motivi, sia stata quasi completamente eliminata, a tal punto da provocare le giuste recriminazioni di chi segue l’ortodossa Religione, mentre i seguaci delle eresie si fanno beffe ed esultano.
+						<br />
+						Altamente Ci affliggiamo che a questa nefasta corruzione di molti si aggiunga la licenza, che ha preso piede a tal punto, senza tenere nel dovuto conto gli insegnamenti apostolici e le sacre disposizioni, da promuovere impunemente banchetti in tempo di digiuno e in pubblico e imbandire in modo indecoroso conviti vietati.</p>
+						<p>Spinti dunque da sincera e assillante preoccupazione, Ci rivolgiamo a Voi, Venerabili Fratelli: non Ci è possibile, per l’alto compito del sacrosanto apostolato a Noi conferito, non sollecitare il Vostro ardente zelo per trovare un rimedio contro questi mali ed escogitare leggi adatte ad estirpare dalle radici questi abusi.
+						<br />
+						Pertanto, Venerabili Fratelli, Nostra gioia e Nostra corona, considerando assieme che non vi è niente di più gradito a Dio, niente di più confacente al Nostro ministero pastorale, niente di più utile per il gregge affidato alla Nostra cura, fatti antesignani con le parole e con l’esempio, facciamo divampare nel cuore dei fedeli il desiderio di riprendere con più convinzione un così salutare esercizio di penitenza e di devozione, di restarvi costantemente fedeli e di compierlo secondo le disposizioni stabilite.
+						<br />
+						Cerchiamo con ogni cura e con tutto lo zelo che i popoli si conservino fedeli davanti a Dio, per una più austera osservanza dei digiuni, come devono essere trovati nelle stesse Feste Pasquali.</p>
+						<p>Pertanto, il dovuto servizio della Vostra paterna sollecitudine e carità richiede che portiate a conoscenza di tutti che a nessuno è lecito dispensare senza giusta motivazione e il consiglio di due medici.
+						<br />
+						La dispensa dal digiuno quaresimale per un’intera popolazione, per una città o per una categoria di persone senza distinzione, deve essere richiesta, se non per un’urgente e gravissima necessità e con il dovuto rispetto di questa Sede Apostolica, ogniqualvolta sarà necessario concederla, senza appropriarsene in modo impudente e risoluto, né pretenderla dalla Chiesa in modo altezzoso e arrogante, come sappiamo essere in uso in certi luoghi.</p>
+						<p>Anche se non v’è motivo d’illustrarVi quale sia la gravissima necessità, vogliamo che sappiate bene come in una simile situazione ci si debba anzitutto attenere ad un unico pasto.
+						<br />
+						Anche qui a Roma, procedendo Noi stessi nel corrente anno per motivi urgenti alla dispensa, abbiamo espressamente decretato che non possano aver luogo, senza discernimento, conviti né leciti né proibiti.</p>
+						<p>Pertanto, come siamo convinti che si debba procedere con somma cautela nel concedere le indulgenze, e non potrebbe essere altrimenti perché dovremo renderne conto al Supremo Giudice, anche in questo caso pensiamo che si debba farne carico alla Vostra coscienza.
+						<br />
+						Nello stesso tempo chiediamo alle Vostre Fraternità e Vi scongiuriamo nel Signore perché, quanti non possono osservare la disciplina penitenziale comune a tutti i fedeli, abbiate a invitarli affinché, come ad ognuno potrà suggerire la propria devozione, non tralascino con altre opere di pietà di espiare le proprie colpe e di chiederne perdono a Dio.
+						<br />
+						Con vero fervore cerchino di scoprire la via migliore per sanare le ferite che si aprono nella fragile natura umana e, non ponendo rimarginarle con il digiuno purificatore, riscattino le colpe contratte per l’umana fragilità con opere di pietà, il suffragio delle preghiere e l’elargizione delle elemosine.</p>
+						<p>Mentre aspettiamo un sollievo e una consolazione alla Nostra pesante afflizione dalla Vostra pastorale sollecitudine e carità, che non Ci farete mancare, con tutto il cuore impartiamo a Voi, Venerabili Fratelli, l’Apostolica Benedizione ricca di abbondanti favori celesti, da estendere ai Vostri popoli.</p>
+						<p>Vogliamo inoltre che le copie della presente, anche stampate, sottoscritte da un pubblico notaio e munite del sigillo di una personalità ecclesiastica, mantengano la stessa autorità dell’originale e sia loro riconosciuta ovunque siano rese pubbliche.</p>
+
+
+
+						<p class="dataluogo" id="bxiv-bre-noa_dataluogo" name="bxiv-bre-noa_dataluogo" aria-label="Data e luogo" title="Data e luogo">Dato a Roma, presso Santa Maria Maggiore, sotto l’anello del Pescatore, il 30 maggio 1741, nel primo anno del Nostro Pontificato.</p>
+
+
+
+						<p class="firmac">Benedictus XIV</p>
+
+
+
+						<hr class="spaziato" />
+						<p class="copyright">Copyright © Dicastero per la Comunicazione - Libreria Editrice Vaticana</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

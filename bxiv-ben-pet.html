@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="./stile.css" />
+		<link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAABRFBMVEUAAAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AADAfbjwAAAAa3RSTlMAAQIDBAUHCAkKDQ8SFBgbHSAjJScpNDY3OTo7Q0VHSElLTlFVVldZXGBiZ25wcnN1d3h6fX+ChYaKj5CXmJyeoKGisbS1tre6wcfIyc3P0NHV1tfZ29zi4+Xm6Onq6+zv8PHy8/T6+/z9/isEjToAAAGJSURBVDjLbZPXXxNREEZPwCiiEY0lYsTeGypWUOwVFNTFroAmZrPn/3/3Ye/WME8793y/2Ttzv4Ei9tz/MkiS+MfifraIxt2hRTwZr/OL1uJOlX9UNbq8b3erfe6dqhvbSuV7anK1kR+cidXhRJ7/UZcblZKP1WEzJCvqrfqlTqp/08/z6txoWyfUeQDUZYBOJ4dvAB6qTWBObQBdnQ583VWAf/oMiNOeu6rdwHUVOK7CLnUMmDFT/FZdA0i0wzX9DiXFes55pS94n7eQKjYKzhHt09NDlBUFZ1JloAepKjLOjrqATYteMkG/+EV6P4t5TKqs6M2Q/8rNEBTT2mdWv5X42kxJ8Vxf5oNK5xOVJ0aih2Ggt4G3gWeK7XBUBWbDY0WBp4p2+livQ6ElgCgq5tEGHqR14Kx6o2qWiWCphTT9pF6vG+qY2suS3qhpF8umZayvJlcKfDpWhztLi/FZ1Q8X9rZaU6eWVN1sVkpeqq/evZHlXUhK+On4Vgs+Nf91kBj/fHSgdPgf4HOs6LtLnD4AAAAASUVORK5CYII=" />
+		<!-- <link rel="shortcut icon" href="data:image/png;base64,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" /> -->
+		<title>Pro eximia tua (30 giugno 1741) | Benedetto XIV</title>
+		<meta name="title" content="Breve Enciclica Pro eximia tua" />
+		<meta name="author" content="Benedictus XIV" />
+		<meta name="subject" content="Breve Enciclica Pro eximia tua" />
+		<meta name="date.issued" content="1741/06/30" />
+		<meta name="description" content="Benedetto XIV, Breve Lettera Enciclica Pro eximia tua, 30 giugno 1741" />
+		<meta name="language" content="Italian" />
+		<meta name="date" content="1741-06-30T08:00:00.000+02:00" />
+		<meta name="copyright" content="Dicastero per la Comunicazione - Libreria Editrice Vaticana" />
+		<meta name="dc.language" content="ita-it" scheme="RFC1766" />
+		<meta itemprop="file-name" value="bxiv-ben-pet" />
+		<meta itemprop="file-extension" value="html" />
+		<meta itemprop="file-name-explain" value="Benedictus XIV - Breve Encyclicae - Pro eximia tua" />
+		<meta name="creator" content="Emanuele Tinari" />
+		<script src="./modal.js">
+// Inserire qui il contenuto del file Index.js ed
+// eliminare il link allo stesso nel src qui sopra.
+		</script>
+	</head>
+	<body class="docBdy" name="docBdy" id="docBdy">
+		<table class="docTbl" name="docTbl" id="docTbl">
+			<tbody>
+				<tr>
+					<td class="logo">
+						<div class="logo"></div>
+						<div>
+							<a href="">Benedetto XIV</a>
+							<p>&rarr;</p>
+							<a href="">Brevi Encicliche</a>
+						</div>
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<td class="main">
+
+
+
+						<hr>
+
+
+
+						<p class="tipd">Breve Enciclica</p>
+
+
+
+						<p class="titd">Pro eximia tua</p>
+
+
+
+						<p class="tipa">del Sommo Pontefice</p>
+
+
+
+						<p class="aut">Benedetto XIV</p>
+
+
+
+						<p class="dest">Al Venerabile Fratello, l’Arcivescovo di Torino.</p>
+
+
+
+						<p class="incipit" id="bxiv-ben-pet_incipit" name="bxiv-ben-pet_incipit" aria-label="Incipit" title="Incipit">Il Papa Benedetto XIV.
+						<br />
+						Al Venerabile Fratello, salute e Apostolica Benedizione.</p>
+
+
+
+						<p class="proemio" id="bxiv-ben-pet_proemio" name="bxiv-ben-pet_proemio" aria-label="Proemio" title="Proemio">Per l’esimio tuo spirito religioso ed il rispetto che devi portare alla disciplina canonica, non dubitiamo affatto che tu, Venerabile Fratello, giustamente apprezzato per la cura pastorale a lungo lodevolmente dedicata al gregge a te affidato, riceverai non poca amarezza per ciò che Noi per mezzo di altra lettera (inviata in forma di Breve ai Vescovi tutti dell’orbe Cattolico, scritta questo stesso giorno, e stampata, e che ti sarà consegnata con questa) non senza grande tristezza ti comunichiamo.
+						<br/>
+						Anche se eravamo informati che la detestabile mercatura, che tanto condanniamo, nella celebrazione delle Messe era in auge anche altrove, non sapevamo tuttavia che fosse tale ed esercitata con sì grande avidità di turpe guadagno, come fummo informati recentemente essere praticata da alcuni Ecclesiastici Pedemontani e da persone laiche.
+						<br/>
+						Pertanto cerchiamo di portare salutare rimedio contro tanto sordido negozio, onde cancellare dalle radici simile nota di infamia dalle Diocesi del Piemonte.
+						<br/>
+						Noi in verità, per non dare l’impressione d’intaccare l’opinione che tutti hanno circa il decoro della disciplina ecclesiastica e l’osservanza che vige nelle diocesi del Piemonte, e per soddisfare debitamente agli impegni di sollecitudine apostolica, decidemmo di scriverne.</p>
+
+
+
+						<p class="paragrafo" id="bxiv-ben-pet_par1" name="bxiv-ben-pet_par1" aria-label="Paragrafo numero 1" title="Paragrafo numero 1"><span class="bold">[1.]</span> Pertanto, se da ciò puoi facilmente dedurre, Venerabile Fratello, la particolare testimonianza di carità verso ciascun Vescovo del Piemonte, così è necessario che grandemente ti adoperi perché, sia per la gravità della situazione, sia a motivo del Nostro intervento, tu ponga ogni sforzo in modo che possiamo congratularci con te della completa estinzione del contagio di mercatura.</p>
+
+
+
+						<p class="paragrafo" id="bxiv-ben-pet_par2" name="bxiv-ben-pet_par2" aria-label="Paragrafo numero 2" title="Paragrafo numero 2"><span class="bold">[2.]</span> Se poi la pervicacia delle persone cattive sarà tanto resistente che non siano per nulla preoccupate delle pene comminate dalle medesime Nostre lettere, e ci sia bisogno di ricorrere all’aiuto del Braccio secolare per estirparla, non tralasciare di farlo intervenire, sicuro che ti sarà accanto più volentieri di quanto tu non pensi.</p>
+
+
+
+						<p class="paragrafo" id="bxiv-ben-pet_par3" name="bxiv-ben-pet_par3" aria-label="Paragrafo numero 3" title="Paragrafo numero 3"><span class="bold">[3.]</span> Sì grande infatti è, e tanto spesso dimostrato dai fatti stessi, l’ossequio verso di Noi e verso questa Apostolica Sede da parte del Nostro Figlio carissimo in Cristo Carlo Emmanuele, illustre Re di Sardegna, che ogni giorno Ci attendiamo maggiori e sicure attestazioni di regale osservanza e di zelo (non solo verso Noi stessi, ma anche verso la Fraternità Tua) per quanto si riferisce alla disciplina ecclesiastica, e di patrocinio verso di Noi.</p>
+
+
+
+						<p>Frattanto impartiamo con molta benevolenza l’Apostolica Benedizione alla Tua Fraternità.</p>
+
+
+
+						<p class="dataluogo" id="bxiv-ben-pet_dataluogo" name="bxiv-ben-pet_dataluogo" aria-label="Data e luogo" title="Data e luogo">Dato a Roma, presso Santa Maria Maggiore, sotto l’anello del Pescatore, il 30 giugno 1741, nell’anno primo del Nostro Pontificato.</p>
+
+
+						<p class="firmac">Benedictus XIV</p>
+
+
+
+						<hr class="spaziato" />
+						<p class="copyright">Copyright © Dicastero per la Comunicazione - Libreria Editrice Vaticana</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
